@@ -47,6 +47,12 @@
         {%- if item.selling_plan_allocation != null -%}
           <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
         {%- endif -%}
+        {%- render 'price',
+          product: item,
+          use_variant: true,
+          show_badges: false,
+          price_class: 'price--large'
+        -%}
       </div>
     </div>
   {%- endfor -%}
